@@ -10,8 +10,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        notNull: { msg: 'Le nom est une propriété requis.' },
-        isEmpty: { msg: 'Le nom est une propriété requis. l\'espace n\'est pas un caractére valide.' }
+        notNull: { msg: 'Les points de vie sont une propriété requis.' }
       }
     },
     hp: {
@@ -41,7 +40,7 @@ module.exports = (sequelize, DataTypes) => {
     types: {
       type: DataTypes.STRING,
       allowNull: false
-/*       get() {
+/*    get() {
         return this.getDataValue('types').split(',')
       },
       set(types) {

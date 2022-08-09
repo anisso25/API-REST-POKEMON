@@ -7,7 +7,7 @@ module.exports = (app) => {
         const message = 'Le pokemon demandé n\'existe pas. Réessayer avec autre identifiant';
         return res.status(404).json({message})
       }
-  
+
       const pokemonDeleted = pokemon;
       return Pokemon.destroy({
         where: { id: pokemon.id }
