@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     name: {
       type: DataTypes.STRING,
       allowNull: false,
-      validator: {
+      validate: {
         notNull: { msg: 'Le nom est une propriété requis.' },
         isEmpty: { msg: 'Le nom est une propriété requis. l\'espace n\'est pas un caractére valide.' }
       }
@@ -18,22 +18,22 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        isInt: { msg: 'Utilisez uniquement des nombres entriers pour les points de vie' },
-        notNull: { msg: 'Les points de vie sont une propriété requis.' }
+        notNull: { msg: 'Les points de vie sont une propriété requis.' },
+        isInt: { msg: 'Utilisez uniquement des nombres entriers pour les points de vie' }
       }
     },
     cp: {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        isInt: { msg: 'Utilisez uniquement des nombres entriers pour les points de force' },
-        notNull: { msg: 'Les points de force sont une propriété requis.' }
+        notNull: { msg: 'Les points de force sont une propriété requis.' },
+        isInt: { msg: 'Utilisez uniquement des nombres entriers pour les points de force' }
       }
     },
     picture: {
       type: DataTypes.STRING,
       allowNull: false,
-      validator: {
+      validate: {
         notNull: { msg: 'L\'image du pokemon est indesponssable' },
         isUrl: { msg: 'Ce chemps doit contenir un URL de l\'image' }
       }
